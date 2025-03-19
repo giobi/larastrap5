@@ -33,24 +33,22 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/dashboard') }}">{{ config('app.name') }}</a>
+            <a class="navbar-brand" href="/dashboard">{{ config('app.name') }}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}" 
-                           href="{{ url('/dashboard') }}">Dashboard</a>
+                        <a class="nav-link" href="/dashboard">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('user.*') ? 'active' : '' }}" 
-                           href="{{ url('/user') }}">{{ __('users.users') }}</a>
+                        <a class="nav-link" href="/user">{{ __('users.users') }}</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <form method="POST" action="{{ url('/logout') }}">
+                        <form method="POST" action="/logout">
                             @csrf
                             <button type="submit" class="btn btn-link nav-link">{{ __('auth.logout') }}</button>
                         </form>
