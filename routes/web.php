@@ -15,7 +15,10 @@ use App\Http\Controllers\Auth\AuthController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    if (auth()->check()) {
+        return redirect('/dashboard');
+    }
+    return redirect('/login');
 });
 
 // Authentication Routes
