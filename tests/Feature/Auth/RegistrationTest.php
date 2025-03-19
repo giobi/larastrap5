@@ -2,13 +2,13 @@
 
 namespace Tests\Feature\Auth;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 use App\Models\User;
 
 class RegistrationTest extends TestCase
 {
-    use RefreshDatabase;
+    use DatabaseTransactions;
 
     public function test_registration_screen_can_be_rendered()
     {
@@ -16,10 +16,11 @@ class RegistrationTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_new_users_can_register()
+    public function test_new_users_can_register(): void
     {
         $response = $this->post('/register', [
-            'name' => 'Test User',
+            'first_name' => 'Test',
+            'last_name' => 'User',
             'email' => 'test@example.com',
             'password' => 'password',
             'password_confirmation' => 'password',

@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'users' => 'Users',
+    'user_management' => 'User Management',
+    'create_user' => 'Create User',
+    'edit_user' => 'Edit User',
+    'user_list' => 'User List',
+    'created_successfully' => 'User created successfully.',
+    'updated_successfully' => 'User updated successfully.',
+    'deleted_successfully' => 'User deleted successfully.',
+    'cannot_delete_self' => 'You cannot delete your own account.',
+    'confirm_delete' => 'Are you sure you want to delete this user?',
+    'actions' => 'Actions',
+    'edit' => 'Edit',
+    'delete' => 'Delete',
+    'save' => 'Save',
+    'cancel' => 'Cancel',
+    'back_to_list' => 'Back to List',
+    'no_users_found' => 'No users found.',
+    'created_at' => 'Created At',
+    'updated_at' => 'Updated At',
+    'leave_blank_to_keep_current_password' => 'Leave blank to keep current password',
+    'search' => 'Search users...',
+]; 

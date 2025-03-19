@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'users' => 'Utenti',
+    'user_management' => 'Gestione Utenti',
+    'create_user' => 'Crea Utente',
+    'edit_user' => 'Modifica Utente',
+    'user_list' => 'Lista Utenti',
+    'created_successfully' => 'Utente creato con successo.',
+    'updated_successfully' => 'Utente aggiornato con successo.',
+    'deleted_successfully' => 'Utente eliminato con successo.',
+    'cannot_delete_self' => 'Non puoi eliminare il tuo account.',
+    'confirm_delete' => 'Sei sicuro di voler eliminare questo utente?',
+    'actions' => 'Azioni',
+    'edit' => 'Modifica',
+    'delete' => 'Elimina',
+    'save' => 'Salva',
+    'cancel' => 'Annulla',
+    'back_to_list' => 'Torna alla Lista',
+    'no_users_found' => 'Nessun utente trovato.',
+    'created_at' => 'Data Creazione',
+    'updated_at' => 'Ultima Modifica',
+    'leave_blank_to_keep_current_password' => 'Lascia vuoto per mantenere la password attuale',
+    'search' => 'Cerca utenti...',
+]; 
