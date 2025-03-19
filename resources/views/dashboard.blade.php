@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,7 +38,7 @@
                     <li class="nav-item">
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <button type="submit" class="btn btn-link nav-link">Logout</button>
+                            <button type="submit" class="btn btn-link nav-link">{{ __('auth.logout') }}</button>
                         </form>
                     </li>
                 </ul>
@@ -51,11 +51,11 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title mb-0">Welcome, {{ Auth::user()->name }}!</h5>
+                        <h5 class="card-title mb-0">{{ __('auth.welcome') }}, {{ Auth::user()->name }}!</h5>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">You are logged in!</p>
-                        <p class="card-text">Your email: {{ Auth::user()->email }}</p>
+                        <p class="card-text">{{ __('auth.you_are_logged') }}</p>
+                        <p class="card-text">{{ __('auth.your_email') }}: {{ Auth::user()->email }}</p>
                     </div>
                 </div>
             </div>

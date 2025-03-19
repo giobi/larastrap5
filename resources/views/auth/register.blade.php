@@ -1,9 +1,9 @@
 @extends('layouts.auth')
 
-@section('title', 'Register')
+@section('title', __('auth.register'))
 
 @section('content')
-    <h2 class="text-center mb-4">Register</h2>
+    <h2 class="text-center mb-4">{{ __('auth.register') }}</h2>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -18,7 +18,7 @@
     <form method="POST" action="{{ route('register') }}">
         @csrf
         <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
+            <label for="name" class="form-label">{{ __('auth.name') }}</label>
             <input type="text" class="form-control @error('name') is-invalid @enderror" 
                    id="name" name="name" value="{{ old('name') }}" required autofocus>
             @error('name')
@@ -27,7 +27,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
+            <label for="email" class="form-label">{{ __('auth.email') }}</label>
             <input type="email" class="form-control @error('email') is-invalid @enderror" 
                    id="email" name="email" value="{{ old('email') }}" required>
             @error('email')
@@ -36,7 +36,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
+            <label for="password" class="form-label">{{ __('auth.password') }}</label>
             <input type="password" class="form-control @error('password') is-invalid @enderror" 
                    id="password" name="password" required>
             @error('password')
@@ -45,17 +45,17 @@
         </div>
 
         <div class="mb-3">
-            <label for="password_confirmation" class="form-label">Confirm Password</label>
+            <label for="password_confirmation" class="form-label">{{ __('auth.confirm_password') }}</label>
             <input type="password" class="form-control" 
                    id="password_confirmation" name="password_confirmation" required>
         </div>
 
         <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-primary">{{ __('auth.register') }}</button>
         </div>
     </form>
 
     <div class="text-center mt-3">
-        <p class="mb-0">Already have an account? <a href="{{ route('login') }}">Login</a></p>
+        <p class="mb-0">{{ __('auth.has_account') }} <a href="{{ route('login') }}">{{ __('auth.login') }}</a></p>
     </div>
 @endsection 
