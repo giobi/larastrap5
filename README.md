@@ -159,7 +159,7 @@ php artisan test
 
 ## Security
 
-If you discover any security-related issues, please email your-email@example.com instead of using the issue tracker.
+If you discover any security-related issues feel free to open a issue.
 
 ## License
 
